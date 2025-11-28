@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
     ],
     [t('footerSupport')]: [
       { label: t('footerFAQ'), href: '#' },
-      { label: t('footerContact'), href: 'mailto:contact@couponvault.app' },
+      { label: t('footerContact'), href: 'mailto:support@couponvault.de' },
       { label: t('footerBugReport'), href: '#' },
     ],
   };
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
                 <GitHubIcon />
               </IconButton>
               <IconButton
-                href="mailto:contact@couponvault.app"
+                href="mailto:support@couponvault.de"
                 sx={{
                   color: 'rgba(230, 225, 229, 0.6)',
                   '&:hover': {
