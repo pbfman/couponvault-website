@@ -1,32 +1,46 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# This workflow builds the website and deploys it to httpdocs folder
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Node.js CI
+name: Build and Deploy Website
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    # Only run on push, not on pull requests (to avoid conflicts)
+    if: github.event_name == 'push'
 
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Use Node.js 20.x
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 20.x
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build:ci
-    - run: rm -rf httpdocs && mv build httpdocs
-    - run: npm test -- --passWithNoTests
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run tests
+      run: npm test -- --passWithNoTests
+    
+    - name: Build website
+      run: npm run build:ci
+    
+    - name: Update httpdocs folder
+      run: rm -rf httpdocs && mv build httpdocs
+    
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add httpdocs
+        git diff --staged --quiet || git commit -m "🚀 Deploy website build [skip ci]"
+        git push
