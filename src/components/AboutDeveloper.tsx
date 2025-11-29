@@ -8,12 +8,14 @@ import {
   CardContent,
   Avatar,
   Chip,
+  Link,
 } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CodeIcon from '@mui/icons-material/Code';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const AboutDeveloper: React.FC = () => {
@@ -160,6 +162,27 @@ const AboutDeveloper: React.FC = () => {
                       border: '1px solid rgba(255, 255, 255, 0.2)',
                     }}
                   />
+                </Box>
+                
+                <Box sx={{ mt: 3 }}>
+                  <Link
+                    href="https://broesamle.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: '#D0BCFF',
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 0.5,
+                      '&:hover': {
+                        textDecoration: 'underline',
+                      },
+                    }}
+                  >
+                    broesamle.dev
+                    <OpenInNewIcon fontSize="small" />
+                  </Link>
                 </Box>
               </Card>
             </motion.div>

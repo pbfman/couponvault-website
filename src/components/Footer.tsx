@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Container,
@@ -11,10 +11,13 @@ import {
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
+import LanguageIcon from '@mui/icons-material/Language';
 import { useLanguage } from '../contexts/LanguageContext';
+import { LegalModal } from './LegalModal';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
+  const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
@@ -27,7 +30,7 @@ const Footer: React.FC = () => {
     [t('footerLegal')]: [
       { label: t('footerPrivacy'), href: '#' },
       { label: t('footerTerms'), href: '#' },
-      { label: t('footerImprint'), href: '#' },
+      { label: t('footerImprint'), href: '#', onClick: () => setIsLegalModalOpen(true) },
     ],
     [t('footerSupport')]: [
       { label: t('footerFAQ'), href: '#' },
@@ -78,7 +81,7 @@ const Footer: React.FC = () => {
             </Typography>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <IconButton
-                href="https://github.com"
+                href="https://github.com/pbfman"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
@@ -90,6 +93,20 @@ const Footer: React.FC = () => {
                 }}
               >
                 <GitHubIcon />
+              </IconButton>
+              <IconButton
+                href="https://broesamle.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: 'rgba(230, 225, 229, 0.6)',
+                  '&:hover': {
+                    color: '#D0BCFF',
+                    background: 'rgba(208, 188, 255, 0.1)',
+                  },
+                }}
+              >
+                <LanguageIcon />
               </IconButton>
               <IconButton
                 href="mailto:support@couponvault.de"
@@ -124,6 +141,12 @@ const Footer: React.FC = () => {
                   <Link
                     key={link.label}
                     href={link.href}
+                    onClick={(e) => {
+                      if (link.onClick) {
+                        e.preventDefault();
+                        link.onClick();
+                      }
+                    }}
                     sx={{
                       color: 'rgba(230, 225, 229, 0.6)',
                       textDecoration: 'none',
@@ -131,6 +154,7 @@ const Footer: React.FC = () => {
                       transition: 'color 0.2s ease',
                       '&:hover': {
                         color: '#D0BCFF',
+                        cursor: 'pointer',
                       },
                     }}
                   >
@@ -172,6 +196,7 @@ const Footer: React.FC = () => {
           </Typography>
         </Box>
       </Container>
+      <LegalModal isOpen={isLegalModalOpen} onClose={() => setIsLegalModalOpen(false)} />
     </Box>
   );
 };
