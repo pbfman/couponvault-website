@@ -57,7 +57,6 @@ const Download: React.FC = () => {
           filter: 'blur(80px)',
         }}
       />
-
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
         <motion.div
           ref={ref}
@@ -65,8 +64,14 @@ const Download: React.FC = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <Grid container spacing={6} alignItems="center">
-            <Grid item xs={12} md={6}>
+          <Grid container spacing={6} sx={{
+            alignItems: "center"
+          }}>
+            <Grid
+              size={{
+                xs: 12,
+                md: 6
+              }}>
               <Chip
                 icon={<AndroidIcon />}
                 label={t('availableOnAndroid')}
@@ -184,7 +189,11 @@ const Download: React.FC = () => {
               </Typography>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid
+              size={{
+                xs: 12,
+                md: 6
+              }}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}

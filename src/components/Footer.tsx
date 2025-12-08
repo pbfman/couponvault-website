@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
   Container,
@@ -8,19 +8,24 @@ import {
   Link,
   Divider,
 } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import LanguageIcon from '@mui/icons-material/Language';
 import { useLanguage } from '../contexts/LanguageContext';
-import { LegalModal } from './LegalModal';
+
+interface FooterLink {
+  label: string;
+  href: string;
+  isRoute?: boolean;
+}
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
-  const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
+  const footerLinks: Record<string, FooterLink[]> = {
     [t('footerProduct')]: [
       { label: t('navFeatures'), href: '#features' },
       { label: t('navHowItWorks'), href: '#how-it-works' },
@@ -28,9 +33,8 @@ const Footer: React.FC = () => {
       { label: t('navDownload'), href: '#download' },
     ],
     [t('footerLegal')]: [
-      { label: t('footerPrivacy'), href: '#' },
-      { label: t('footerTerms'), href: '#' },
-      { label: t('footerImprint'), href: '#', onClick: () => setIsLegalModalOpen(true) },
+      { label: t('footerPrivacy'), href: '/datenschutz', isRoute: true },
+      { label: t('footerImprint'), href: '/impressum', isRoute: true },
     ],
     [t('footerSupport')]: [
       { label: t('footerFAQ'), href: '#' },
@@ -51,7 +55,11 @@ const Footer: React.FC = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {/* Brand column */}
-          <Grid item xs={12} md={4}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 4
+            }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
               <LocalActivityIcon
                 sx={{
@@ -125,7 +133,13 @@ const Footer: React.FC = () => {
 
           {/* Links columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
-            <Grid item xs={6} sm={4} md={2.5} key={category}>
+            <Grid
+              key={category}
+              size={{
+                xs: 6,
+                sm: 4,
+                md: 2.5
+              }}>
               <Typography
                 variant="subtitle2"
                 sx={{
@@ -138,28 +152,42 @@ const Footer: React.FC = () => {
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                 {links.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    onClick={(e) => {
-                      if (link.onClick) {
-                        e.preventDefault();
-                        link.onClick();
-                      }
-                    }}
-                    sx={{
-                      color: 'rgba(230, 225, 229, 0.6)',
-                      textDecoration: 'none',
-                      fontSize: '0.875rem',
-                      transition: 'color 0.2s ease',
-                      '&:hover': {
-                        color: '#D0BCFF',
-                        cursor: 'pointer',
-                      },
-                    }}
-                  >
-                    {link.label}
-                  </Link>
+                  link.isRoute ? (
+                    <Link
+                      key={link.label}
+                      component={RouterLink}
+                      to={link.href}
+                      sx={{
+                        color: 'rgba(230, 225, 229, 0.6)',
+                        textDecoration: 'none',
+                        fontSize: '0.875rem',
+                        transition: 'color 0.2s ease',
+                        '&:hover': {
+                          color: '#D0BCFF',
+                          cursor: 'pointer',
+                        },
+                      }}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      sx={{
+                        color: 'rgba(230, 225, 229, 0.6)',
+                        textDecoration: 'none',
+                        fontSize: '0.875rem',
+                        transition: 'color 0.2s ease',
+                        '&:hover': {
+                          color: '#D0BCFF',
+                          cursor: 'pointer',
+                        },
+                      }}
+                    >
+                      {link.label}
+                    </Link>
+                  )
                 ))}
               </Box>
             </Grid>
@@ -196,7 +224,6 @@ const Footer: React.FC = () => {
           </Typography>
         </Box>
       </Container>
-      <LegalModal isOpen={isLegalModalOpen} onClose={() => setIsLegalModalOpen(false)} />
     </Box>
   );
 };

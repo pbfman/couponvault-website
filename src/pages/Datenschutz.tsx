@@ -1,92 +1,44 @@
 import React from 'react';
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  IconButton,
-  Typography,
-  Box,
-  Link,
-  Divider,
-  useTheme,
-  useMediaQuery
-} from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { Box, Container, Typography, IconButton, Link } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useNavigate } from 'react-router-dom';
 
-interface LegalModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+const Datenschutz: React.FC = () => {
+  const navigate = useNavigate();
 
   return (
-    <Dialog
-      open={isOpen}
-      onClose={onClose}
-      scroll="paper"
-      maxWidth="md"
-      fullWidth
-      fullScreen={fullScreen}
-      PaperProps={{
-        sx: {
-          bgcolor: '#1C1B1F',
-          backgroundImage: 'none',
-          border: '1px solid rgba(208, 188, 255, 0.1)',
-        }
+    <Box
+      sx={{
+        minHeight: '100vh',
+        background: 'linear-gradient(180deg, #1C1B1F 0%, #2B2930 100%)',
+        py: 4,
       }}
     >
-      <DialogTitle sx={{ m: 0, p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Typography variant="h5" component="div" sx={{ color: 'white', fontWeight: 'bold' }}>
-          Impressum / Legal Notice
-        </Typography>
+      <Container maxWidth="md">
         <IconButton
-          aria-label="close"
-          onClick={onClose}
+          onClick={() => navigate('/')}
           sx={{
-            color: (theme) => theme.palette.grey[500],
+            color: '#D0BCFF',
+            mb: 2,
+            '&:hover': {
+              background: 'rgba(208, 188, 255, 0.1)',
+            },
           }}
         >
-          <CloseIcon />
+          <ArrowBackIcon />
         </IconButton>
-      </DialogTitle>
-      <DialogContent dividers sx={{ borderColor: 'rgba(208, 188, 255, 0.1)' }}>
-        {/* German Section */}
-        <Box sx={{ mb: 4, color: 'text.secondary' }}>
-          <Typography variant="h6" gutterBottom sx={{ color: 'white', mt: 2 }}>
-            Angaben gemäß § 5 TMG
-          </Typography>
-          <Typography paragraph>
-            Patrick Brösamle<br />
-            Blumenstr. 91<br />
-            01307 Dresden
-          </Typography>
 
-          <Typography variant="h6" gutterBottom sx={{ color: 'white', mt: 3 }}>
-            Kontakt
-          </Typography>
-          <Typography paragraph>
-            E-Mail: <Link href="mailto:patrick@broesamle.dev" sx={{ color: '#D0BCFF' }}>patrick@broesamle.dev</Link>
-          </Typography>
+        <Typography variant="h3" sx={{ color: 'white', fontWeight: 'bold', mb: 4 }}>
+          Datenschutzerklärung / Privacy Policy
+        </Typography>
 
-          <Typography variant="h6" gutterBottom sx={{ color: 'white', mt: 3 }}>
-            Haftungsausschluss (Disclaimer)
-          </Typography>
-          
-          <Typography variant="subtitle1" sx={{ color: 'white', mt: 2, fontWeight: 'bold' }}>
-            Haftung für Links
-          </Typography>
-          <Typography paragraph>
-            Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
-          </Typography>
-        </Box>
-
-        <Divider sx={{ my: 4, borderColor: 'rgba(208, 188, 255, 0.2)' }} />
-
-        {/* Data privacy */}
-        <Box sx={{ color: 'text.secondary', '& h1, & h2, & h3, & h4, & h5, & h6': { color: 'white' } }}>
+        {/* Placeholder für Datenschutztext */}
+        <Box sx={{ color: 'text.secondary' }}>
+          <Typography
+            sx={{
+              color: 'rgba(230, 225, 229, 0.7)',
+              marginBottom: "16px"
+            }}>
           <h1>Datenschutz&shy;erkl&auml;rung</h1>
           <h2>1. Datenschutz auf einen Blick</h2>
           <h3>Allgemeine Hinweise</h3> <p>Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.</p>
@@ -122,8 +74,11 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
           <h2>4. Datenerfassung auf dieser Website</h2>
           <h3>Anfrage per E-Mail, Telefon oder Telefax</h3> <p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p> <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.</p> <p>Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.</p>
           <p>Quelle: <Link href="https://www.e-recht24.de">https://www.e-recht24.de</Link></p>
+          </Typography>
         </Box>
-      </DialogContent>
-    </Dialog>
+      </Container>
+    </Box>
   );
 };
+
+export default Datenschutz;

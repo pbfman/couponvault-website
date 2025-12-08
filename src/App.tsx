@@ -1,15 +1,9 @@
-import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { LanguageProvider } from './contexts/LanguageContext';
-import Navbar from './components/Navbar';
-import DevelopmentBanner from './components/DevelopmentBanner';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import HowItWorks from './components/HowItWorks';
-import Gamification from './components/Gamification';
-import AboutDeveloper from './components/AboutDeveloper';
-import Download from './components/Download';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
 import './App.css';
 
 // Material Design 3 inspired theme with CouponVault colors
@@ -95,19 +89,13 @@ function App() {
     <LanguageProvider>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className="app">
-          <Navbar />
-          <DevelopmentBanner />
-          <main>
-            <Hero />
-            <Features />
-            <HowItWorks />
-            <Gamification />
-            <AboutDeveloper />
-            <Download />
-          </main>
-          <Footer />
-        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
+          </Routes>
+        </BrowserRouter>
       </ThemeProvider>
     </LanguageProvider>
   );

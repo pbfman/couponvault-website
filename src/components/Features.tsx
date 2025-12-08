@@ -101,7 +101,6 @@ const Features: React.FC = () => {
           filter: 'blur(40px)',
         }}
       />
-
       <Container maxWidth="lg">
         <motion.div
           ref={ref}
@@ -111,34 +110,38 @@ const Features: React.FC = () => {
         >
           <Typography
             variant="h2"
-            textAlign="center"
             sx={{
+              textAlign: "center",
               mb: 2,
               background: 'linear-gradient(135deg, #FFFFFF 0%, #D0BCFF 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
+              WebkitTextFillColor: 'transparent'
+            }}>
             {t('powerfulFeatures')}
           </Typography>
           <Typography
             variant="body1"
-            textAlign="center"
             sx={{
+              textAlign: "center",
               mb: 8,
               color: 'rgba(230, 225, 229, 0.7)',
               maxWidth: 600,
-              mx: 'auto',
-            }}
-          >
+              mx: 'auto'
+            }}>
             {t('featuresSubtitle')}
           </Typography>
         </motion.div>
 
         <Grid container spacing={3}>
           {features.map((feature, index) => (
-            <Grid item xs={12} sm={6} md={3} key={feature.title}>
+            <Grid
+              key={feature.title}
+              size={{
+                xs: 12,
+                sm: 6,
+                md: 3
+              }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}

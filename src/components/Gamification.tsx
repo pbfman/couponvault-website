@@ -100,7 +100,6 @@ const Gamification: React.FC = () => {
           filter: 'blur(40px)',
         }}
       />
-
       <Container maxWidth="lg">
         <motion.div
           ref={ref}
@@ -149,7 +148,11 @@ const Gamification: React.FC = () => {
 
         <Grid container spacing={4}>
           {/* XP Earning Card */}
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -233,7 +236,11 @@ const Gamification: React.FC = () => {
           </Grid>
 
           {/* Levels & Badges Card */}
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -363,7 +370,7 @@ const Gamification: React.FC = () => {
           </Grid>
 
           {/* Community Features */}
-          <Grid item xs={12}>
+          <Grid size={12}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -377,8 +384,14 @@ const Gamification: React.FC = () => {
                 }}
               >
                 <CardContent sx={{ p: 4 }}>
-                  <Grid container spacing={4} alignItems="center">
-                    <Grid item xs={12} md={8}>
+                  <Grid container spacing={4} sx={{
+                    alignItems: "center"
+                  }}>
+                    <Grid
+                      size={{
+                        xs: 12,
+                        md: 8
+                      }}>
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
                         <GroupIcon sx={{ fontSize: 32, color: '#D0BCFF' }} />
                         <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
@@ -424,7 +437,11 @@ const Gamification: React.FC = () => {
                         />
                       </Box>
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid
+                      size={{
+                        xs: 12,
+                        md: 4
+                      }}>
                       <Box
                         sx={{
                           textAlign: 'center',

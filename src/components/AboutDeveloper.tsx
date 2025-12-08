@@ -49,7 +49,6 @@ const AboutDeveloper: React.FC = () => {
           filter: 'blur(40px)',
         }}
       />
-
       <Container maxWidth="lg">
         <motion.div
           ref={ref}
@@ -86,9 +85,15 @@ const AboutDeveloper: React.FC = () => {
           </Box>
         </motion.div>
 
-        <Grid container spacing={4} alignItems="center">
+        <Grid container spacing={4} sx={{
+          alignItems: "center"
+        }}>
           {/* Developer Photo & Intro */}
-          <Grid item xs={12} md={5}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 5
+            }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -189,7 +194,11 @@ const AboutDeveloper: React.FC = () => {
           </Grid>
 
           {/* Story */}
-          <Grid item xs={12} md={7}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 7
+            }}>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}

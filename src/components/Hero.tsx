@@ -54,10 +54,15 @@ const Hero: React.FC = () => {
           filter: 'blur(40px)',
         }}
       />
-
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-        <Grid container spacing={6} alignItems="center">
-          <Grid item xs={12} md={6}>
+        <Grid container spacing={6} sx={{
+          alignItems: "center"
+        }}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -171,7 +176,11 @@ const Hero: React.FC = () => {
             </motion.div>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <Box
               sx={{
                 display: 'flex',

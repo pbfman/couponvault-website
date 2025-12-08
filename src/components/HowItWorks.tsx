@@ -72,7 +72,6 @@ const HowItWorks: React.FC = () => {
           filter: 'blur(40px)',
         }}
       />
-
       <Container maxWidth="lg">
         <motion.div
           ref={ref}
@@ -82,34 +81,38 @@ const HowItWorks: React.FC = () => {
         >
           <Typography
             variant="h2"
-            textAlign="center"
             sx={{
+              textAlign: "center",
               mb: 2,
               background: 'linear-gradient(135deg, #FFFFFF 0%, #D0BCFF 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
+              WebkitTextFillColor: 'transparent'
+            }}>
             {t('howItWorks')}
           </Typography>
           <Typography
             variant="body1"
-            textAlign="center"
             sx={{
+              textAlign: "center",
               mb: 10,
               color: 'rgba(230, 225, 229, 0.7)',
               maxWidth: 600,
-              mx: 'auto',
-            }}
-          >
+              mx: 'auto'
+            }}>
             {t('howItWorksSubtitle')}
           </Typography>
         </motion.div>
 
         <Grid container spacing={4}>
           {steps.map((step, index) => (
-            <Grid item xs={12} sm={6} md={3} key={step.number}>
+            <Grid
+              key={step.number}
+              size={{
+                xs: 12,
+                sm: 6,
+                md: 3
+              }}>
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
