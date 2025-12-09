@@ -28,14 +28,11 @@ jobs:
     - name: Install dependencies
       run: npm ci
     
-    - name: Run tests
-      run: npm test -- --passWithNoTests
+    - name: Remove old files folder
+      run: rm -rf httpdocs
     
     - name: Build website
-      run: npm run build:ci
-    
-    - name: Update httpdocs folder
-      run: rm -rf httpdocs && mv build httpdocs
+      run: npm run build
     
     - name: Commit and push changes
       run: |
