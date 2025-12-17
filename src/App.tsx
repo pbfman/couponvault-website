@@ -6,7 +6,7 @@ import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import './App.css';
 
-// Material Design 3 inspired theme with CouponVault colors
+// Material Design 3 inspired theme with CouponTresor colors
 const theme = createTheme({
   palette: {
     mode: 'dark',

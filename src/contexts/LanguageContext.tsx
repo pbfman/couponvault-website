@@ -18,7 +18,7 @@ const translations: Record<Language, Translations> = {
     // Hero
     aiPoweredSavings: 'KI-gestütztes Sparen',
     heroTitle: 'Verpasse nie wieder ein Angebot',
-    heroSubtitle: 'CouponVault organisiert all deine Coupons mit KI-gestützter Extraktion. Mach ein Foto und wir erledigen den Rest. Verfolge Ablaufdaten, verdiene Belohnungen und spare mühelos Geld.',
+    heroSubtitle: 'CouponTresor organisiert all deine Coupons mit KI-gestützter Extraktion. Mach ein Foto und wir erledigen den Rest. Verfolge Ablaufdaten, verdiene Belohnungen und spare mühelos Geld.',
     downloadForAndroid: 'Für Android herunterladen',
     learnMore: 'Mehr erfahren',
     freeToUse: 'Kostenlos nutzbar',
@@ -27,7 +27,7 @@ const translations: Record<Language, Translations> = {
 
     // Development Banner
     inDevelopment: 'In Entwicklung',
-    inDevelopmentDesc: 'CouponVault befindet sich derzeit in aktiver Entwicklung. Die App wird bald im Google Play Store verfügbar sein!',
+    inDevelopmentDesc: 'CouponTresor befindet sich derzeit in aktiver Entwicklung. Die App wird bald im Google Play Store verfügbar sein!',
     comingSoon: 'Bald verfügbar',
 
     // Features
@@ -97,8 +97,8 @@ const translations: Record<Language, Translations> = {
 
     // Download
     availableOnAndroid: 'Bald für Android verfügbar',
-    downloadTitle: 'Lade CouponVault herunter',
-    downloadSubtitle: 'Starte heute mit dem Organisieren deiner Coupons. CouponVault ist kostenlos zum Herunterladen und Nutzen. KI-Funktionen wie Premium-OCR benötigen In-App-Credits.',
+    downloadTitle: 'Lade CouponTresor herunter',
+    downloadSubtitle: 'Starte heute mit dem Organisieren deiner Coupons. CouponTresor ist kostenlos zum Herunterladen und Nutzen. KI-Funktionen wie Premium-OCR benötigen In-App-Credits.',
     downloadSecure: 'Sicher & Privat',
     downloadUpdates: 'Regelmäßige Updates',
     downloadFree: 'Kostenlose Kernfunktionen + optionale Credits für KI',
@@ -122,13 +122,13 @@ const translations: Record<Language, Translations> = {
     // Coupon Card
     expiresIn: 'Läuft ab in',
     days: 'Tagen',
-    storedIn: 'Gespeichert in CouponVault',
+    storedIn: 'Gespeichert in CouponTresor',
 
     // About Developer
     aboutDeveloperChip: 'Über den Entwickler',
     aboutTitle: 'Die Geschichte hinter der App',
     aboutHello: 'Hallo, ich bin Patrick',
-    aboutRole: 'Entwickler & Gründer von CouponVault',
+    aboutRole: 'Entwickler & Gründer von CouponTresor',
     aboutStoryTitle: 'Warum ich diese App entwickelt habe',
     aboutStoryPart1: 'Ich selbst habe eine volle Pinnwand und ein volles E-Mail-Postfach mit Gutscheinen, die man vielleicht mal braucht. Ich vergesse diese dann einzulösen oder dass ich sie überhaupt habe. Manchmal schmeiße ich welche weg, von denen ich denke, dass ich sie nie brauchen werde – und genau dann brauche ich sie doch!',
     aboutStoryPart2: 'Deshalb habe ich diese App entwickelt. Ich möchte sie auch mit anderen teilen und versuche, sie zu fairen Preisen bereitzustellen.',
@@ -145,7 +145,7 @@ const translations: Record<Language, Translations> = {
     // Hero
     aiPoweredSavings: 'AI-Powered Savings',
     heroTitle: 'Never Miss a Deal Again',
-    heroSubtitle: 'CouponVault organizes all your coupons with AI-powered extraction. Snap a photo, and we\'ll do the rest. Track expiration dates, earn rewards, and save money effortlessly.',
+    heroSubtitle: 'CouponTresor organizes all your coupons with AI-powered extraction. Snap a photo, and we\'ll do the rest. Track expiration dates, earn rewards, and save money effortlessly.',
     downloadForAndroid: 'Download for Android',
     learnMore: 'Learn More',
     freeToUse: 'Free to Use*',
@@ -154,7 +154,7 @@ const translations: Record<Language, Translations> = {
 
     // Development Banner
     inDevelopment: 'In Development',
-    inDevelopmentDesc: 'CouponVault is currently in active development. The app will be available on Google Play Store soon!',
+    inDevelopmentDesc: 'CouponTresor is currently in active development. The app will be available on Google Play Store soon!',
     comingSoon: 'Coming Soon',
 
     // Features
@@ -224,8 +224,8 @@ const translations: Record<Language, Translations> = {
 
     // Download
     availableOnAndroid: 'Coming Soon for Android',
-    downloadTitle: 'Download CouponVault',
-    downloadSubtitle: 'Start organizing your coupons today. CouponVault is free to download and use. AI features like premium OCR require in-app credits.',
+    downloadTitle: 'Download CouponTresor',
+    downloadSubtitle: 'Start organizing your coupons today. CouponTresor is free to download and use. AI features like premium OCR require in-app credits.',
     downloadSecure: 'Secure & Private',
     downloadUpdates: 'Regular Updates',
     downloadFree: 'Free Core Features + Optional AI Credits',
@@ -249,13 +249,13 @@ const translations: Record<Language, Translations> = {
     // Coupon Card
     expiresIn: 'Expires in',
     days: 'days',
-    storedIn: 'Stored in CouponVault',
+    storedIn: 'Stored in CouponTresor',
 
     // About Developer
     aboutDeveloperChip: 'About the Developer',
     aboutTitle: 'The Story Behind the App',
     aboutHello: 'Hello, I\'m Patrick',
-    aboutRole: 'Developer & Founder of CouponVault',
+    aboutRole: 'Developer & Founder of CouponTresor',
     aboutStoryTitle: 'Why I built this app',
     aboutStoryPart1: 'I have a pinboard full of coupons and an inbox overflowing with vouchers that I might need someday. I keep forgetting to redeem them or even that I have them. Sometimes I throw some away thinking I\'ll never need them – and that\'s exactly when I do!',
     aboutStoryPart2: 'That\'s why I developed this app. I want to share it with others and try to offer it at fair prices.',
