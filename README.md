@@ -1,6 +1,6 @@
-# CouponVault Website
+# CouponTresor Website
 
-Official website for CouponVault - Your AI-powered coupon organizer.
+Official website for CouponTresor - Your AI-powered coupon organizer.
 
 ## 🚀 Features
 
@@ -84,4 +84,4 @@ The website follows Material Design 3 guidelines with:
 
 ## 📄 License
 
-© 2025 CouponVault. All rights reserved.
+© 2025 CouponTresor. All rights reserved.

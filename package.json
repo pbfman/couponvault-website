@@ -1,7 +1,7 @@
 {
-  "name": "couponvault-website",
+  "name": "coupontresor-website",
   "version": "1.0.0",
-  "description": "Official website for CouponVault - AI-powered coupon organization app",
+  "description": "Official website for CouponTresor - AI-powered coupon organization app",
   "private": true,
   "type": "module",
   "dependencies": {

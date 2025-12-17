@@ -250,7 +250,7 @@ const Download: React.FC = () => {
                           variant="h6"
                           sx={{ color: 'white', fontWeight: 600 }}
                         >
-                          CouponVault
+                          CouponTresor
                         </Typography>
                       </Box>
 
