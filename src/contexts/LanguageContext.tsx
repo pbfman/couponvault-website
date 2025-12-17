@@ -283,9 +283,6 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       return 'de';
     }
     if (hostname.includes('couponvault.de')) {
-      return 'de';
-    }
-    if (hostname.includes('coupontresor.com') || hostname.includes('couponvault.com')) {
       return 'en';
     }
 

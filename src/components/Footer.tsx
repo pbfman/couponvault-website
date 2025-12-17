@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
                 <LanguageIcon />
               </IconButton>
               <IconButton
-                href="mailto:support@couponvault.de"
+                href="mailto:support@coupontresor.de"
                 sx={{
                   color: 'rgba(230, 225, 229, 0.6)',
                   '&:hover': {
@@ -214,7 +214,7 @@ const Footer: React.FC = () => {
             variant="body2"
             sx={{ color: 'rgba(230, 225, 229, 0.5)' }}
           >
-            © {currentYear} CouponVault. {t('footerRights')}
+© {currentYear} CouponTresor. {t('footerRights')}
           </Typography>
           <Typography
             variant="body2"
