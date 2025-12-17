@@ -273,7 +273,20 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>(() => {
-    // Detect browser language
+    // 1. Check if language was explicitly set (via URL or user preference)
+    const stored = localStorage.getItem('language') as Language | null;
+    if (stored) return stored;
+
+    // 2. Check domain-based language preference
+    const hostname = window.location.hostname.toLowerCase();
+    if (hostname.includes('coupontresor.de')) {
+      return 'de';
+    }
+    if (hostname.includes('couponvault.de')) {
+      return 'en';
+    }
+
+    // 3. Detect browser language as fallback
     const browserLang = navigator.language.toLowerCase();
     return browserLang.startsWith('de') ? 'de' : 'en';
   });
@@ -285,8 +298,13 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     [language]
   );
 
+  const updateLanguage = useCallback((lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem('language', lang);
+  }, []);
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: updateLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
