@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
               <Box
                 component="img"
                 src="/icon.png"
-                alt="CouponVault"
+                alt="CouponTresor"
                 sx={{
                   width: 40,
                   height: 40,
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                CouponVault
+                CouponTresor
               </Typography>
             </Box>
 

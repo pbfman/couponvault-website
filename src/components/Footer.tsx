@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
     ],
     [t('footerSupport')]: [
       { label: t('footerFAQ'), href: '#' },
-      { label: t('footerContact'), href: 'mailto:support@couponvault.de' },
+      { label: t('footerContact'), href: 'mailto:support@coupontresor.de' },
       { label: t('footerBugReport'), href: '#' },
     ],
   };
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                   color: 'white',
                 }}
               >
-                CouponVault
+                CouponTresor
               </Typography>
             </Box>
             <Typography
