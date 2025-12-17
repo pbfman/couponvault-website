@@ -21,7 +21,7 @@ const translations: Record<Language, Translations> = {
     heroSubtitle: 'CouponVault organisiert all deine Coupons mit KI-gestützter Extraktion. Mach ein Foto und wir erledigen den Rest. Verfolge Ablaufdaten, verdiene Belohnungen und spare mühelos Geld.',
     downloadForAndroid: 'Für Android herunterladen',
     learnMore: 'Mehr erfahren',
-    freeToUse: 'Kostenlos',
+    freeToUse: 'Kostenlos nutzbar',
     aiOCR: 'KI OCR',
     unlimited: 'Unbegrenzt',
 
@@ -98,10 +98,10 @@ const translations: Record<Language, Translations> = {
     // Download
     availableOnAndroid: 'Bald für Android verfügbar',
     downloadTitle: 'Lade CouponVault herunter',
-    downloadSubtitle: 'Starte heute mit dem Organisieren deiner Coupons. CouponVault ist kostenlos zum Herunterladen und Nutzen.',
+    downloadSubtitle: 'Starte heute mit dem Organisieren deiner Coupons. CouponVault ist kostenlos zum Herunterladen und Nutzen. KI-Funktionen wie Premium-OCR benötigen In-App-Credits.',
     downloadSecure: 'Sicher & Privat',
     downloadUpdates: 'Regelmäßige Updates',
-    downloadFree: 'Kostenlose Kernfunktionen',
+    downloadFree: 'Kostenlose Kernfunktionen + optionale Credits für KI',
     getOnGooglePlay: 'Bei Google Play erhältlich',
     requiresAndroid: 'Erfordert Android 8.0 oder höher',
 
@@ -148,7 +148,7 @@ const translations: Record<Language, Translations> = {
     heroSubtitle: 'CouponVault organizes all your coupons with AI-powered extraction. Snap a photo, and we\'ll do the rest. Track expiration dates, earn rewards, and save money effortlessly.',
     downloadForAndroid: 'Download for Android',
     learnMore: 'Learn More',
-    freeToUse: 'Free to Use',
+    freeToUse: 'Free to Use*',
     aiOCR: 'AI OCR',
     unlimited: 'Unlimited',
 
@@ -225,10 +225,10 @@ const translations: Record<Language, Translations> = {
     // Download
     availableOnAndroid: 'Coming Soon for Android',
     downloadTitle: 'Download CouponVault',
-    downloadSubtitle: 'Start organizing your coupons today. CouponVault is free to download and use.',
+    downloadSubtitle: 'Start organizing your coupons today. CouponVault is free to download and use. AI features like premium OCR require in-app credits.',
     downloadSecure: 'Secure & Private',
     downloadUpdates: 'Regular Updates',
-    downloadFree: 'Free Core Features',
+    downloadFree: 'Free Core Features + Optional AI Credits',
     getOnGooglePlay: 'Get it on Google Play',
     requiresAndroid: 'Requires Android 8.0 or higher',
 
