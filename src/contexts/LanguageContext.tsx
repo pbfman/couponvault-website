@@ -12,6 +12,7 @@ const translations: Record<Language, Translations> = {
     navFeatures: 'Funktionen',
     navHowItWorks: 'So funktioniert\'s',
     navGamification: 'Belohnungen',
+    navDeveloper: 'Entwickler',
     navDownload: 'Download',
     getApp: 'Zur App',
 
@@ -142,6 +143,7 @@ const translations: Record<Language, Translations> = {
     navFeatures: 'Features',
     navHowItWorks: 'How It Works',
     navGamification: 'Rewards',
+    navDeveloper: 'Developer',
     navDownload: 'Download',
     getApp: 'Get App',
 
