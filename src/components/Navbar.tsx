@@ -41,6 +41,7 @@ const Navbar: React.FC = () => {
     { label: t('navFeatures'), href: '#features' },
     { label: t('navHowItWorks'), href: '#how-it-works' },
     { label: t('navGamification'), href: '#gamification' },
+    { label: t('navDeveloper'), href: '#about-developer' },
     { label: t('navDownload'), href: '#download' },
   ];
 
