@@ -28,8 +28,11 @@ const Datenschutz: React.FC = () => {
           <ArrowBackIcon />
         </IconButton>
 
-        <Typography variant="h3" sx={{ color: 'white', fontWeight: 'bold', mb: 4 }}>
+        <Typography variant="h3" sx={{ color: 'white', fontWeight: 'bold', mb: 1 }}>
           Datenschutzerklärung / Privacy Policy
+        </Typography>
+        <Typography variant="caption" sx={{ color: 'rgba(230, 225, 229, 0.5)', mb: 4, display: 'block' }}>
+          Zuletzt aktualisiert: 20.12.2025
         </Typography>
 
         {/* Placeholder für Datenschutztext */}

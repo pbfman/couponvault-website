@@ -4,6 +4,10 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import Home from './pages/Home';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
+import AGB from './pages/AGB';
+import Widerruf from './pages/Widerruf';
+import DatenschutzApp from './pages/DatenschutzApp';
+import LizenzenCompact from './pages/LizenzenCompact';
 import './App.css';
 
 // Material Design 3 inspired theme with CouponTresor colors
@@ -94,6 +98,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/agb" element={<AGB />} />
+            <Route path="/widerruf" element={<Widerruf />} />
+            <Route path="/datenschutz-app" element={<DatenschutzApp />} />
+            <Route path="/lizenzen" element={<LizenzenCompact />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
