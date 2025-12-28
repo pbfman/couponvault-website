@@ -29,7 +29,7 @@ const Datenschutz: React.FC = () => {
         </IconButton>
 
         <Typography variant="h3" sx={{ color: 'white', fontWeight: 'bold', mb: 1 }}>
-          Datenschutzerklärung / Privacy Policy
+          Datenschutzerklärung Webseite coupontresor.de / Privacy Policy Website couponvault.de
         </Typography>
         <Typography variant="caption" sx={{ color: 'rgba(230, 225, 229, 0.5)', mb: 4, display: 'block' }}>
           Zuletzt aktualisiert: 20.12.2025

@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { useEffect } from 'react';
 import Home from './pages/Home';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
@@ -88,21 +89,41 @@ const theme = createTheme({
   },
 });
 
+// Komponente um Scroll-Position zu Reset bei Route-Änderungen
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function AppContent() {
+  return (
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/datenschutz-web" element={<Datenschutz />} />
+        <Route path="/agb" element={<AGB />} />
+        <Route path="/widerruf" element={<Widerruf />} />
+        <Route path="/datenschutz-app" element={<DatenschutzApp />} />
+        <Route path="/lizenzen" element={<LizenzenCompact />} />
+      </Routes>
+    </>
+  );
+}
+
 function App() {
   return (
     <LanguageProvider>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/impressum" element={<Impressum />} />
-            <Route path="/datenschutz" element={<Datenschutz />} />
-            <Route path="/agb" element={<AGB />} />
-            <Route path="/widerruf" element={<Widerruf />} />
-            <Route path="/datenschutz-app" element={<DatenschutzApp />} />
-            <Route path="/lizenzen" element={<LizenzenCompact />} />
-          </Routes>
+          <AppContent />
         </BrowserRouter>
       </ThemeProvider>
     </LanguageProvider>

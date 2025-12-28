@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
       { label: t('navDownload'), href: '#download' },
     ],
     [t('footerLegal')]: [
-      { label: t('footerPrivacy'), href: '/datenschutz', isRoute: true },
+      { label: t('footerPrivacy'), href: '/datenschutz-web', isRoute: true },
       { label: t('footerPrivacyApp'), href: '/datenschutz-app', isRoute: true },
       { label: t('footerImprint'), href: '/impressum', isRoute: true },
       { label: t('footerTerms'), href: '/agb', isRoute: true },
