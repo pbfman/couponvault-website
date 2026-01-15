@@ -222,23 +222,23 @@ const Footer: React.FC = () => {
           </Typography>
           <Typography
             variant="body2"
-            sx={{ color: 'rgba(230, 225, 229, 0.5)', textAlign: { xs: 'center', sm: 'right' } }}
+            sx={{ color: 'rgba(230, 225, 229, 0.5)', textAlign: 'center' }}
           >
             {t('footerMadeWith')}
-            <br />
-            <Link 
-              href="https://logo.dev" 
-              target="_blank" 
-              rel="noopener"
-              sx={{ 
-                color: 'inherit', 
-                textDecoration: 'none',
-                '&:hover': { color: '#D0BCFF' }
-              }}
-            >
-              Logos provided by Logo.dev
-            </Link>
           </Typography>
+          <Link 
+            href="https://logo.dev" 
+            target="_blank" 
+            rel="noopener"
+            sx={{ 
+              color: 'rgba(230, 225, 229, 0.5)', 
+              textDecoration: 'none',
+              fontSize: '0.875rem',
+              '&:hover': { color: '#D0BCFF' }
+            }}
+          >
+            Logos provided by Logo.dev
+          </Link>
         </Box>
       </Container>
     </Box>

@@ -61,6 +61,13 @@ const Impressum: React.FC = () => {
           <Typography variant="h6" sx={{ color: 'white', mt: 3, fontWeight: 'bold' }}>
             Haftung für Links
           </Typography>
+          <Typography sx={{
+            marginBottom: "16px"
+          }}>
+            Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+          </Typography>
+
+
           <Typography variant="h5" gutterBottom sx={{ color: 'white', mt: 4 }}>
             Marken- und Urheberrechtshinweise
           </Typography>
