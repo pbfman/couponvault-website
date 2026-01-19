@@ -6237,7 +6237,7 @@ const OTHER_PACKAGES: PackageInfo[] = [
 ];
 // END_OTHER_PACKAGES
 
-const PackageItem = ({ pkg }: { pkg: PackageInfo }) => {
+const PackageItem = (pkg: PackageInfo) => {
   const [expanded, setExpanded] = useState(false);
   const licenseText = pkg.licenseId ? LICENSE_TEXTS[pkg.licenseId] : null;
 
