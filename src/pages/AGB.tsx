@@ -132,54 +132,72 @@ const AGB: React.FC = () => {
             4. Community-Funktionen
           </Typography>
           <Typography paragraph>
-            Nutzer können Coupons bewerten (Up/Down-Vote) und Informationen teilen. Es ist untersagt, rechtswidrige, beleidigende oder irreführende Inhalte zu veröffentlichen. Der Anbieter behält sich vor, Inhalte bei Verstößen ohne Vorankündigung zu löschen.
+            Nutzer können Coupons bewerten (Up/Down-Vote) und Informationen teilen. Es ist untersagt, rechtswidrige, beleidigende oder irreführende Inhalte zu veröffentlichen.
+          </Typography>
+          <Typography paragraph>
+            <strong>Wichtig – Beachten Sie die Gutscheinbedingungen:</strong> Der Nutzer ist verpflichtet, die Bedingungen und Einschränkungen der Gutscheine sowie die Vorgaben des Herausgebers zu beachten, bevor er diese mit der Community teilt oder vervielfältigt. Falls die Gutscheinbedingungen oder der Herausgeber eine Veröffentlichung, Vervielfältigung, Weitergabe oder sonstige Nutzung untersagen, darf der Nutzer diesen Gutschein nicht über die Community-Funktionen verbreiten, mit anderen teilen oder generell in die Anwendung einpflegen.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            5. In-App-Käufe und Abonnements
+            5. Löschung von Inhalten und des Kontos ohne Vorankündigung
+          </Typography>
+          <Typography paragraph>
+            Der Anbieter behält sich das Recht vor, Inhalte bei Verstößen ohne Vorankündigung zu löschen. Ebenso kann der Anbieter Konten sperren oder löschen, wenn gegen die Nutzungsbedingungen verstoßen wird.
+          </Typography>
+
+          <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
+            6. In-App-Käufe und Abonnements
           </Typography>
           <Typography paragraph>
             Sämtliche Zahlungen werden über die Zahlungssysteme von Apple oder Google abgewickelt. Es gelten ergänzend die Bedingungen der jeweiligen Store-Betreiber. Preise verstehen sich inklusive der geltenden Umsatzsteuer.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            6. Haftungsbeschränkung
+            7. Haftungsbeschränkung
           </Typography>
           <Typography paragraph>
-            Der Anbieter übernimmt keine Gewähr für die Richtigkeit der durch die KI analysierten Daten. Der Nutzer ist verpflichtet, die erkannten Daten (z. B. Ablaufdatum) vor der Einlösung eines Coupons selbst zu prüfen. Wir haften nicht für die Verfügbarkeit oder Akzeptanz der Coupons bei den jeweiligen Einzelhändlern.
+            Der Anbieter übernimmt keine Gewähr für die Richtigkeit der durch die KI analysierten Daten. Ausgenommen hiervon ist Vorsatz und grobe Fahrlässigkeit auf Seiten des Anbieters. Der Nutzer ist verpflichtet, die erkannten Daten (z. B. Ablaufdatum) vor der Einlösung eines Coupons selbst zu prüfen. 
+Wir haften nicht für die Verfügbarkeit oder Akzeptanz der Coupons bei den jeweiligen Einzelhändlern.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            7. Widerrufsrecht
+            8. Widerrufsrecht
           </Typography>
           <Typography paragraph>
             Verbrauchern steht ein gesetzliches Widerrufsrecht zu. Details hierzu finden sich in der separaten <Link component={RouterLink} to="/widerruf" sx={{ color: '#D0BCFF' }}>Widerrufsbelehrung</Link>.
-            Hinweis: Das Widerrufsrecht für digitale Inhalte erlischt vorzeitig, wenn der Nutzer ausdrücklich zugestimmt hat, dass der Anbieter mit der Ausführung des Vertrages vor Ende der Widerrufsfrist beginnt.
+            Hinweis: Das Widerrufsrecht für digitale Inhalte erlischt vorzeitig, wenn der Nutzer ausdrücklich zugestimmt hat, dass der Anbieter mit der Ausführung des Vertrages vor Ende der Widerrufsfrist beginnt und der Verbraucher Kenntnis darüber hat, dass er durch die Zustimmung mit Beginn der Lieferung des digitalen Inhalts sein Widerrufsrecht verliert.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            8. Verfügbarkeit
+            9. Verfügbarkeit
           </Typography>
           <Typography paragraph>
             Wir bemühen uns um eine möglichst unterbrechungsfreie Verfügbarkeit der App. Ausfallzeiten durch Wartung, Updates oder technische Probleme können jedoch nicht vollständig ausgeschlossen werden.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            9. Anwendbares Recht
+            10. Anwendbares Recht
           </Typography>
           <Typography paragraph>
             Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts, soweit dem keine zwingenden Verbraucherschutzvorschriften entgegenstehen.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            10. Streitbeilegung
+            11. Streitbeilegung
           </Typography>
           <Typography paragraph>
             Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <Link href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener" sx={{ color: '#D0BCFF' }}>https://ec.europa.eu/consumers/odr/</Link>. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            11. Salvatorische Klausel
+            12. Änderungen der Nutzungsbedingungen
+          </Typography>
+          <Typography paragraph>
+            Der Anbieter behält sich das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Alle Änderungen werden in unserer App veröffentlicht, und wir empfehlen Ihnen, diese Nutzungsbedingungen regelmäßig auf Aktualisierungen zu überprüfen. Ihre fortgesetzte Nutzung des Dienstes nach Änderungen dieser Nutzungsbedingungen bedeutet Ihre Akzeptanz dieser Änderungen.
+          </Typography>
+
+          <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
+            13. Salvatorische Klausel
           </Typography>
           <Typography paragraph>
             Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
@@ -287,54 +305,71 @@ const AGB: React.FC = () => {
             4. Community Features
           </Typography>
           <Typography paragraph>
-            Users can rate coupons (up/down vote) and share information. It is prohibited to publish illegal, offensive, or misleading content. The provider reserves the right to delete content in case of violations without prior notice.
+            Users can rate coupons (up/down vote) and share information. It is prohibited to publish illegal, offensive, or misleading content.
+          </Typography>
+          <Typography paragraph>
+            <strong>Important – Respect Coupon Terms:</strong> Users are obligated to respect the terms, conditions, and restrictions of coupons as well as the issuer's stipulations before sharing or duplicating them with the community. If the coupon terms or issuer prohibit publication, duplication, sharing, or any other use, users must not distribute the coupon via community features, share it with others, or add it to the application in general.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            5. In-App Purchases
+            5. Removal of Content and Accounts Without Notice
+          </Typography>
+          <Typography paragraph>
+            The provider reserves the right to delete content without prior notice in case of violations. The provider may also suspend or delete accounts if the terms of use are violated.
+          </Typography>
+
+          <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
+            6. In-App Purchases and Subscriptions
           </Typography>
           <Typography paragraph>
             All payments are processed through Apple's or Google's payment systems. The terms and conditions of the respective store operators apply additionally. Prices include applicable VAT.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            6. Limitation of Liability
+            7. Limitation of Liability
           </Typography>
           <Typography paragraph>
-            The provider assumes no liability for the accuracy of the data analyzed by the AI. The user is obliged to verify the detected data (e.g., expiration date) themselves before redeeming a coupon. We are not liable for the availability or acceptance of coupons by the respective retailers.
+            The provider assumes no warranty for the accuracy of data analyzed by the AI, except in cases of intent or gross negligence on the part of the provider. The user must verify detected data (e.g., expiration date) themselves before redeeming a coupon. We are not liable for the availability or acceptance of coupons by the respective retailers.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            7. Right of Withdrawal
+            8. Right of Withdrawal
           </Typography>
           <Typography paragraph>
             Consumers have a statutory right of withdrawal. Details can be found in the separate <Link component={RouterLink} to="/widerruf" sx={{ color: '#D0BCFF' }}>cancellation policy</Link>.
-            Note: The right of withdrawal for digital content expires prematurely if the user has expressly agreed that the provider begins the execution of the contract before the end of the withdrawal period.
+            Note: The right of withdrawal for digital content expires prematurely if the user has expressly agreed that the provider begins the execution of the contract before the end of the withdrawal period and the consumer is aware that this will cause them to lose their right of withdrawal.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            8. Availability
+            9. Availability
           </Typography>
           <Typography paragraph>
             We strive for the most uninterrupted availability of the app possible. However, downtime due to maintenance, updates, or technical issues cannot be completely ruled out.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            9. Applicable Law
+            10. Applicable Law
           </Typography>
           <Typography paragraph>
             The law of the Federal Republic of Germany applies, excluding the UN Sales Convention, unless mandatory consumer protection regulations oppose this.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            10. Dispute Resolution
+            11. Dispute Resolution
           </Typography>
           <Typography paragraph>
             The EU Commission provides a platform for online dispute resolution (ODR): <Link href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener" sx={{ color: '#D0BCFF' }}>https://ec.europa.eu/consumers/odr/</Link>. We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
           </Typography>
 
           <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
-            11. Severability Clause
+            12. Changes to the Terms of Use
+          </Typography>
+          <Typography paragraph>
+            The provider reserves the right to change these terms of use at any time. All changes will be published in our app, and we recommend reviewing these terms regularly for updates. Continued use of the service after changes signifies acceptance of the updated terms.
+          </Typography>
+
+          <Typography variant="h6" sx={{ color: 'white', mt: 2, mb: 1 }}>
+            13. Severability Clause
           </Typography>
           <Typography paragraph>
             Should individual provisions of these Terms & Conditions be or become invalid, the validity of the remaining provisions remains unaffected.
