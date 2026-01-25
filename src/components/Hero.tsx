@@ -20,13 +20,15 @@ const Hero: React.FC = () => {
     <Box
       component="section"
       sx={{
-        minHeight: '100vh',
+        height: '100vh',
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         position: 'relative',
         overflow: 'hidden',
-        pt: { xs: 12, md: 4 },
-        pb: { xs: 8, md: 0 },
+        pt: { xs: 40, md: 0 },
+        pb: { xs: 4, md: 0 },
+        mt: { xs: 0, md: '-80px' },
       }}
     >
       {/* Background gradient orbs */}
@@ -152,7 +154,7 @@ const Hero: React.FC = () => {
                 {[
                   { value: '100%', label: t('freeToUse') },
                   { value: 'AI', label: t('poweredOCR') },
-                  { value: '∞', label: t('couponsStored') },
+                  { value: '0%', label: t('ads') },
                 ].map((stat) => (
                   <Box key={stat.label}>
                     <Typography
@@ -208,6 +210,10 @@ const Hero: React.FC = () => {
                   code="SAVE20"
                   expiresIn="5 days"
                   color="#FF9900"
+                  isOwn
+                  visibility="public"
+                  syncedToCloud
+                  productName="Electronics & Accessories"
                 />
               </motion.div>
               <motion.div
@@ -227,6 +233,14 @@ const Hero: React.FC = () => {
                   code="MM50OFF"
                   expiresIn="2 weeks"
                   color="#DF0000"
+                  creatorName="Sarah Mueller"
+                  creatorLevel={15}
+                  creatorBadges={[
+                    { name: 'verified', tier: 'gold', image: '' },
+                    { name: 'trusted', tier: 'silver', image: '' },
+                  ]}
+                  confirmations={8}
+                  reports={1}
                 />
               </motion.div>
               <motion.div
@@ -246,6 +260,9 @@ const Hero: React.FC = () => {
                   code="REWE10"
                   expiresIn="1 month"
                   color="#CC071E"
+                  isOwn
+                  visibility="private"
+                  syncedToCloud={false}
                 />
               </motion.div>
             </Box>

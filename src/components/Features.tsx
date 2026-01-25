@@ -10,13 +10,13 @@ import {
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
 import ShareIcon from '@mui/icons-material/Share';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import EmailIcon from '@mui/icons-material/Email';
 import CloudSyncIcon from '@mui/icons-material/CloudSync';
+import SecurityIcon from '@mui/icons-material/Security';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Features: React.FC = () => {
@@ -25,15 +25,9 @@ const Features: React.FC = () => {
   const features = [
     {
       icon: <CameraAltIcon sx={{ fontSize: 40 }} />,
-      title: t('featureOCR'),
-      description: t('featureOCRDesc'),
+      title: t('featureAIOCR'),
+      description: t('featureAIOCRDesc'),
       color: '#FF6B6B',
-    },
-    {
-      icon: <AutoAwesomeIcon sx={{ fontSize: 40 }} />,
-      title: t('featureAI'),
-      description: t('featureAIDesc'),
-      color: '#4ECDC4',
     },
     {
       icon: <NotificationsActiveIcon sx={{ fontSize: 40 }} />,
@@ -70,6 +64,12 @@ const Features: React.FC = () => {
       title: t('featureCloudSync'),
       description: t('featureCloudSyncDesc'),
       color: '#7B68EE',
+    },
+    {
+      icon: <SecurityIcon sx={{ fontSize: 40 }} />,
+      title: t('featurePrivacy'),
+      description: t('featurePrivacyDesc'),
+      color: '#00D084',
     },
   ];
   const [ref, inView] = useInView({

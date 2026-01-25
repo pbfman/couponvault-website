@@ -53,7 +53,7 @@ const HowItWorks: React.FC = () => {
       component="section"
       id="how-it-works"
       sx={{
-        py: { xs: 10, md: 15 },
+        py: { xs: 10, md: 25 },
         background: 'linear-gradient(180deg, #1C1B1F 0%, #2B2930 50%, #1C1B1F 100%)',
         position: 'relative',
         overflow: 'hidden',
