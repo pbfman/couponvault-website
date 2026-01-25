@@ -20,14 +20,14 @@ const Hero: React.FC = () => {
     <Box
       component="section"
       sx={{
-        height: '100vh',
+        minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         position: 'relative',
         overflow: 'hidden',
-        pt: { xs: 40, md: 0 },
-        pb: { xs: 4, md: 0 },
+        pt: { xs: 5, md: 0 },
+        pb: { xs: 8, md: 0 },
         mt: { xs: 0, md: '-80px' },
       }}
     >

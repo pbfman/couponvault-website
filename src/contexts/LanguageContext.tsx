@@ -149,7 +149,7 @@ const translations: Record<Language, Translations> = {
 
     // Hero
     aiPoweredSavings: 'AI-Powered Savings',
-    heroTitle: 'Never Miss a Deal Again',
+    heroTitle: 'Never Miss a Coupon Again',
     heroSubtitle: 'CouponTresor organizes all your coupons with AI-powered extraction. Snap a photo, and we\'ll do the rest. Track expiration dates, earn rewards, and save money effortlessly.',
     downloadForAndroid: 'Download for Android',
     learnMore: 'Learn More',
