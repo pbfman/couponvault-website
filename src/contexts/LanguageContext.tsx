@@ -137,6 +137,17 @@ const translations: Record<Language, Translations> = {
     aboutStoryPart1: 'Ich selbst habe eine volle Pinnwand und ein volles E-Mail-Postfach mit Gutscheinen, die man vielleicht mal braucht. Ich vergesse diese dann einzulösen oder dass ich sie überhaupt habe. Manchmal schmeiße ich welche weg, von denen ich denke, dass ich sie nie brauchen werde – und genau dann brauche ich sie doch!',
     aboutStoryPart2: 'Deshalb habe ich diese App entwickelt. Ich möchte sie auch mit anderen teilen und versuche, sie zu fairen Preisen bereitzustellen.',
     aboutHope: 'Ich hoffe, sie hilft dir auch, Geld zu sparen!',
+
+    // Roadmap
+    roadmapChip: 'Roadmap',
+    roadmapTitle: 'Feature Abstimmung',
+    roadmapSubtitle: 'Bestimme mit, welche Funktionen als nächstes in CouponTresor einziehen. Deine Stimme zählt – anonym und direkt.',
+    roadmapStatusDone: 'Erledigt',
+    roadmapStatusInProgress: 'In Arbeit',
+    roadmapStatusPlanned: 'Geplant',
+    roadmapVote: 'Upvote',
+    roadmapVoted: 'Abgestimmt',
+    roadmapErrorLoad: 'Konnte Roadmap nicht laden.',
   },
   en: {
     // Navbar
@@ -268,6 +279,17 @@ const translations: Record<Language, Translations> = {
     aboutStoryPart1: 'I have a pinboard full of coupons and an inbox overflowing with vouchers that I might need someday. I keep forgetting to redeem them or even that I have them. Sometimes I throw some away thinking I\'ll never need them – and that\'s exactly when I do!',
     aboutStoryPart2: 'That\'s why I developed this app. I want to share it with others and try to offer it at fair prices.',
     aboutHope: 'I hope it helps you save money too!',
+
+    // Roadmap
+    roadmapChip: 'Roadmap',
+    roadmapTitle: 'Feature Voting',
+    roadmapSubtitle: 'Help decide which features come next to CouponTresor. Your vote counts – anonymous and direct.',
+    roadmapStatusDone: 'Done',
+    roadmapStatusInProgress: 'In Progress',
+    roadmapStatusPlanned: 'Planned',
+    roadmapVote: 'Upvote',
+    roadmapVoted: 'Voted',
+    roadmapErrorLoad: 'Could not load roadmap.',
   },
 };
 
