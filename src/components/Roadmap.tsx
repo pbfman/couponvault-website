@@ -26,7 +26,8 @@ interface RoadmapFeature {
   description_de: string;
   description_en: string;
   votes: number;
-  status: string;
+  status_de: string;
+  status_en: string;
 }
 
 const Roadmap: React.FC = () => {
@@ -57,9 +58,9 @@ const Roadmap: React.FC = () => {
           if (import.meta.env.DEV && response.status === 404) {
               console.warn("API not found in dev, using mock data.");
               const mockData = [
-                  { id: 1, title_de: 'Dunkelmodus Option', title_en: 'Dark Mode Option', description_de: 'Manuelles Umschalten zwischen Hell/Dunkel', description_en: 'Manual switch between light/dark', votes: 120, status: 'planned' },
-                  { id: 2, title_de: 'Mehr Sortieroptionen', title_en: 'More Sorting Options', description_de: 'Sortieren nach Laden oder Datum', description_en: 'Sort by shop or date', votes: 85, status: 'in-progress' },
-                  { id: 3, title_de: 'Freunde einladen', title_en: 'Invite Friends', description_de: 'Referral-System für Bonuspunkte', description_en: 'Referral system for bonus points', votes: 45, status: 'planned' }
+                  { id: 1, title_de: 'Dunkelmodus Option', title_en: 'Dark Mode Option', description_de: 'Manuelles Umschalten zwischen Hell/Dunkel', description_en: 'Manual switch between light/dark', votes: 120, status_de: 'geplant', status_en: 'planned' },
+                  { id: 2, title_de: 'Mehr Sortieroptionen', title_en: 'More Sorting Options', description_de: 'Sortieren nach Laden oder Datum', description_en: 'Sort by shop or date', votes: 85, status_de: 'in Arbeit', status_en: 'in-progress' },
+                  { id: 3, title_de: 'Freunde einladen', title_en: 'Invite Friends', description_de: 'Referral-System für Bonuspunkte', description_en: 'Referral system for bonus points', votes: 45, status_de: 'geplant', status_en: 'planned' }
               ];
               setFeatures(mockData.sort((a, b) => b.votes - a.votes));
               setLoading(false);
@@ -127,21 +128,11 @@ const Roadmap: React.FC = () => {
 
   // Status colors helper
   const getStatusColor = (status: string) => {
-    switch (status.toLowerCase()) {
-      case 'done': return '#4CAF50'; // Green
-      case 'in-progress': return '#FF9800'; // Orange
-      case 'planned': return '#2196F3'; // Blue
-      default: return '#9E9E9E'; // Grey
-    }
-  };
-
-  const getStatusLabel = (status: string) => {
-     switch (status.toLowerCase()) {
-        case 'done': return t('roadmapStatusDone');
-        case 'in-progress': return t('roadmapStatusInProgress');
-        case 'planned': return t('roadmapStatusPlanned');
-        default: return status;
-     }
+    const normalized = status.toLowerCase();
+    if (normalized.includes('done') || normalized.includes('erledigt')) return '#4CAF50'; // Green
+    if (normalized.includes('progress') || normalized.includes('arbeit')) return '#FF9800'; // Orange
+    if (normalized.includes('planned') || normalized.includes('geplant')) return '#2196F3'; // Blue
+    return '#9E9E9E'; // Grey
   };
 
   return (
@@ -195,6 +186,7 @@ const Roadmap: React.FC = () => {
                         {features.map((feature) => {
                             const title = language === 'de' ? feature.title_de : feature.title_en;
                             const description = language === 'de' ? feature.description_de : feature.description_en;
+                            const status = language === 'de' ? feature.status_de : feature.status_en;
                             return (
                             <Grid size={{ xs: 12, md: 6, lg: 4 }} key={feature.id}>
                                 <motion.div layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
@@ -213,13 +205,13 @@ const Roadmap: React.FC = () => {
                                         <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                                             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 2 }}>
                                                 <Chip 
-                                                    label={getStatusLabel(feature.status)} 
+                                                    label={status} 
                                                     size="small" 
                                                     sx={{ 
-                                                        bgcolor: `${getStatusColor(feature.status)}20`, 
-                                                        color: getStatusColor(feature.status),
+                                                        bgcolor: `${getStatusColor(status)}20`, 
+                                                        color: getStatusColor(status),
                                                         fontWeight: 600,
-                                                        border: `1px solid ${getStatusColor(feature.status)}40`
+                                                        border: `1px solid ${getStatusColor(status)}40`
                                                     }} 
                                                 />
                                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: '#D0BCFF' }}>
