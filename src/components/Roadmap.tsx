@@ -21,14 +21,16 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 interface RoadmapFeature {
   id: number;
-  title: string;
-  description: string;
+  title_de: string;
+  title_en: string;
+  description_de: string;
+  description_en: string;
   votes: number;
   status: string;
 }
 
 const Roadmap: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [features, setFeatures] = useState<RoadmapFeature[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -52,13 +54,12 @@ const Roadmap: React.FC = () => {
       const response = await fetch('/api/roadmap-api.php?action=get');
       
       if (!response.ok) {
-          // If 404/500 (e.g. local dev without PHP), handle gracefully or mock
           if (import.meta.env.DEV && response.status === 404) {
               console.warn("API not found in dev, using mock data.");
               const mockData = [
-                  { id: 1, title: 'Dunkelmodus Option', description: 'Manuelles Umschalten zwischen Hell/Dunkel', votes: 120, status: 'planned' },
-                  { id: 2, title: 'Mehr Sortieroptionen', description: 'Sortieren nach Laden oder Datum', votes: 85, status: 'in-progress' },
-                  { id: 3, title: 'Freunde einladen', description: 'Referral-System für Bonuspunkte', votes: 45, status: 'planned' }
+                  { id: 1, title_de: 'Dunkelmodus Option', title_en: 'Dark Mode Option', description_de: 'Manuelles Umschalten zwischen Hell/Dunkel', description_en: 'Manual switch between light/dark', votes: 120, status: 'planned' },
+                  { id: 2, title_de: 'Mehr Sortieroptionen', title_en: 'More Sorting Options', description_de: 'Sortieren nach Laden oder Datum', description_en: 'Sort by shop or date', votes: 85, status: 'in-progress' },
+                  { id: 3, title_de: 'Freunde einladen', title_en: 'Invite Friends', description_de: 'Referral-System für Bonuspunkte', description_en: 'Referral system for bonus points', votes: 45, status: 'planned' }
               ];
               setFeatures(mockData.sort((a, b) => b.votes - a.votes));
               setLoading(false);
@@ -191,7 +192,10 @@ const Roadmap: React.FC = () => {
             ) : (
                 <Grid container spacing={3}>
                     <AnimatePresence>
-                        {features.map((feature) => (
+                        {features.map((feature) => {
+                            const title = language === 'de' ? feature.title_de : feature.title_en;
+                            const description = language === 'de' ? feature.description_de : feature.description_en;
+                            return (
                             <Grid size={{ xs: 12, md: 6, lg: 4 }} key={feature.id}>
                                 <motion.div layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
                                     <Card sx={{ 
@@ -226,11 +230,11 @@ const Roadmap: React.FC = () => {
                                             </Box>
                                             
                                             <Typography variant="h6" gutterBottom color="text.primary">
-                                                {feature.title}
+                                                {title}
                                             </Typography>
                                             
                                             <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-                                                {feature.description}
+                                                {description}
                                             </Typography>
 
                                             <Box sx={{ mt: 'auto' }}>
@@ -264,7 +268,8 @@ const Roadmap: React.FC = () => {
                                     </Card>
                                 </motion.div>
                             </Grid>
-                        ))}
+                            );
+                        })}
                     </AnimatePresence>
                 </Grid>
             )}

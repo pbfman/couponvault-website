@@ -72,8 +72,8 @@ if (!$action || $_SERVER['REQUEST_METHOD'] === 'POST') {
 switch ($action) {
     case 'get':
         try {
-            // Fetch all visible features, sorted by votes
-            $stmt = $pdo->prepare("SELECT id, title, description, votes, status FROM roadmap WHERE is_visible = 1 ORDER BY votes DESC");
+            // Fetch all visible features with localized content, sorted by votes
+            $stmt = $pdo->prepare("SELECT id, title_de, title_en, description_de, description_en, votes, status FROM roadmap WHERE is_visible = 1 ORDER BY votes DESC");
             $stmt->execute();
             $features = $stmt->fetchAll(PDO::FETCH_ASSOC);
             echo json_encode(['features' => $features]);
