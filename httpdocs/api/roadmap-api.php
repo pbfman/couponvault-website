@@ -59,6 +59,16 @@ foreach ($botKeywords as $keyword) {
 
 $action = $_GET['action'] ?? $_POST['action'] ?? '';
 
+// Parse JSON body once and reuse it
+$input = [];
+if (!$action || $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $rawInput = file_get_contents('php://input');
+    $input = json_decode($rawInput, true) ?? [];
+    if (!$action) {
+        $action = $input['action'] ?? '';
+    }
+}
+
 switch ($action) {
     case 'get':
         try {
@@ -80,8 +90,7 @@ switch ($action) {
             exit;
         }
 
-        // Get ID from POST body (JSON or Form Data)
-        $input = json_decode(file_get_contents('php://input'), true);
+        // Use already parsed input (avoid reading php://input twice)
         $id = $input['id'] ?? $_POST['id'] ?? null;
 
         if (!$id) {
