@@ -102,11 +102,22 @@ const Roadmap: React.FC = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Vote failed');
+        const errorData = await response.json().catch(() => ({}));
+        const errorMsg = errorData.error || `HTTP ${response.status}`;
+        console.error(`Vote failed for feature ${id}:`, {
+          status: response.status,
+          statusText: response.statusText,
+          error: errorMsg,
+          fullResponse: errorData
+        });
+        throw new Error(`Vote failed: ${errorMsg}`);
       }
+
+      const result = await response.json();
+      console.log(`Vote successful for feature ${id}:`, result);
     } catch (err) {
       // Revert on error
-      console.error("Voting error", err);
+      console.error("Voting error for feature", id, err);
       setFeatures(previousFeatures);
       setVotedIds(prev => prev.filter(vid => vid !== id));
       // Optionally show snackbar error
