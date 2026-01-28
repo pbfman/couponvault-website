@@ -37,7 +37,7 @@ const Download: React.FC = () => {
       component="section"
       id="download"
       sx={{
-        py: { xs: 10, md: 15 },
+        py: { xs: 10, md: 30 },
         background: 'linear-gradient(180deg, #1C1B1F 0%, #2B2930 100%)',
         position: 'relative',
         overflow: 'hidden',

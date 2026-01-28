@@ -7,6 +7,7 @@ import HowItWorks from '../components/HowItWorks';
 import Gamification from '../components/Gamification';
 import AboutDeveloper from '../components/AboutDeveloper';
 import Download from '../components/Download';
+import Roadmap from '../components/Roadmap';
 import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
         <Gamification />
         <AboutDeveloper />
         <Download />
+        <Roadmap />
       </main>
       <Footer />
     </div>
