@@ -37,6 +37,7 @@ const Footer: React.FC = () => {
       { label: t('footerPrivacyApp'), href: '/datenschutz-app', isRoute: true },
       { label: t('footerImprint'), href: '/impressum', isRoute: true },
       { label: t('footerTerms'), href: '/agb', isRoute: true },
+      { label: t('footerEmailTerms'), href: '/agb-email', isRoute: true },
       { label: t('footerWithdrawal'), href: '/widerruf', isRoute: true },
       { label: t('footerLicenses'), href: '/lizenzen', isRoute: true },
     ],

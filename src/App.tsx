@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import AGB from './pages/AGB';
+import AGBEmail from './pages/AGBEmail';
 import Widerruf from './pages/Widerruf';
 import DatenschutzApp from './pages/DatenschutzApp';
 import LizenzenCompact from './pages/LizenzenCompact';
@@ -109,6 +110,7 @@ function AppContent() {
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/datenschutz-web" element={<Datenschutz />} />
         <Route path="/agb" element={<AGB />} />
+        <Route path="/agb-email" element={<AGBEmail />} />
         <Route path="/widerruf" element={<Widerruf />} />
         <Route path="/datenschutz-app" element={<DatenschutzApp />} />
         <Route path="/lizenzen" element={<LizenzenCompact />} />
