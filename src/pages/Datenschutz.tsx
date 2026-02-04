@@ -76,6 +76,21 @@ const Datenschutz: React.FC = () => {
           <h3>Widerspruch gegen Werbe-E-Mails</h3> <p>Der Nutzung von im Rahmen der Impressumspflicht ver&ouml;ffentlichten Kontaktdaten zur &Uuml;bersendung von nicht ausdr&uuml;cklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdr&uuml;cklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.</p>
           <h2>4. Datenerfassung auf dieser Website</h2>
           <h3>Anfrage per E-Mail, Telefon oder Telefax</h3> <p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p> <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.</p> <p>Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.</p>
+<h3>
+  Roadmap-Interaktion und Feature-Voting
+</h3>
+<p>
+Wir bieten Besuchern auf unserer Webseite die Möglichkeit, über geplante Funktionen (Roadmap) abzustimmen. 
+          Um eine missbräuchliche Nutzung durch automatisierte Bots zu verhindern, wird beim Votvorgang der User-Agent 
+          Ihres Browsers technisch geprüft. Es findet dabei keine Speicherung von IP-Adressen, Cookies oder sonstigen 
+          Merkmalen statt, die eine Identifizierung des Nutzers ermöglichen. Die Stimmen werden rein kumulativ in 
+          einer Datenbank bei unserem Hoster netcup hochgezählt, um die Priorisierung von Features zu unterstützen.
+</p>
+<p>
+  Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse 
+  liegt in der bedarfsgerechten Gestaltung und Verbesserung unseres Onlineangebots sowie in der Sicherstellung 
+  der Integrit&auml;t des Abstimmungsprozesses durch Bot-Abwehr.
+</p>
           <p>Quelle: <Link href="https://www.e-recht24.de">https://www.e-recht24.de</Link></p>
           </Typography>
         </Box>
