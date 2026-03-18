@@ -46,6 +46,15 @@ const Impressum: React.FC = () => {
           </Typography>
 
           <Typography variant="h5" gutterBottom sx={{ color: 'white', mt: 4 }}>
+            Umsatzsteuer-ID
+          </Typography>
+          <Typography sx={{
+            marginBottom: "16px"
+          }}>
+            DE460309370
+          </Typography>
+
+          <Typography variant="h5" gutterBottom sx={{ color: 'white', mt: 4 }}>
             Kontakt
           </Typography>
           <Typography sx={{
