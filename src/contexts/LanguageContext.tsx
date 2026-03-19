@@ -149,6 +149,23 @@ const translations: Record<Language, Translations> = {
     roadmapVote: 'Upvote',
     roadmapVoted: 'Abgestimmt',
     roadmapErrorLoad: 'Konnte Roadmap nicht laden.',
+
+    // Account Delete
+    accountDeleteTitle: 'Account löschen',
+    accountDeleteSubtitle: 'So löschst du deinen CouponTresor-Account in wenigen Schritten.',
+    accountDeleteStep1Title: 'In CouponTresor App einloggen',
+    accountDeleteStep1Desc: 'Starte die CouponTresor App auf deinem Gerät und melde dich mit deinen Zugangsdaten an.',
+    accountDeleteStep2Title: 'Zu Einstellungen wechseln',
+    accountDeleteStep2Desc: 'Tippe auf das Einstellungen-Symbol in der Navigation der App.',
+    accountDeleteStep3Title: 'Account-Verwaltung öffnen',
+    accountDeleteStep3Desc: 'Scrolle nach unten zu „Account Verwaltung" und tippe auf „Details anzeigen".',
+    accountDeleteStep4Title: 'Den Button „Account löschen" drücken',
+    accountDeleteStep4Desc: 'Tippe auf den Button „Account löschen".',
+    accountDeleteStep5Title: 'Löschen bestätigen',
+    accountDeleteStep5Desc: 'Bestätige die Löschung im Bestätigungsdialog. Dein Account und alle deine Daten werden unwiderruflich gelöscht.',
+    accountDeleteWarning: 'Diese Aktion ist unwiderruflich. Alle deine Daten – einschließlich gespeicherter Coupons, XP und Badges – werden permanent gelöscht.',
+    accountDeleteAlternativeTitle: 'Probleme beim Löschen?',
+    accountDeleteAlternativeDesc: 'Falls du deinen Account nicht direkt in der App löschen kannst, wende dich bitte an uns:',
   },
   en: {
     // Navbar
@@ -292,6 +309,23 @@ const translations: Record<Language, Translations> = {
     roadmapVote: 'Upvote',
     roadmapVoted: 'Voted',
     roadmapErrorLoad: 'Could not load roadmap.',
+
+    // Account Delete
+    accountDeleteTitle: 'Delete Account',
+    accountDeleteSubtitle: 'How to delete your CouponTresor account in a few steps.',
+    accountDeleteStep1Title: 'Log in to the CouponTresor App',
+    accountDeleteStep1Desc: 'Launch the CouponTresor app on your device and sign in with your credentials.',
+    accountDeleteStep2Title: 'Go to Settings',
+    accountDeleteStep2Desc: 'Tap the Settings icon in the app navigation.',
+    accountDeleteStep3Title: 'Open Account Management',
+    accountDeleteStep3Desc: 'Scroll down to "Account Management" and tap "Show Details".',
+    accountDeleteStep4Title: 'Tap the "Delete Account" button',
+    accountDeleteStep4Desc: 'Tap the "Delete Account" button.',
+    accountDeleteStep5Title: 'Confirm deletion',
+    accountDeleteStep5Desc: 'Confirm the deletion in the confirmation dialog. Your account and all your data will be permanently deleted.',
+    accountDeleteWarning: 'This action is irreversible. All your data – including saved coupons, XP, and badges – will be permanently deleted.',
+    accountDeleteAlternativeTitle: 'Having trouble deleting?',
+    accountDeleteAlternativeDesc: 'If you are unable to delete your account directly in the app, please contact us:',
   },
 };
 

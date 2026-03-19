@@ -10,6 +10,7 @@ import AGBEmail from './pages/AGBEmail';
 import Widerruf from './pages/Widerruf';
 import DatenschutzApp from './pages/DatenschutzApp';
 import LizenzenCompact from './pages/LizenzenCompact';
+import AccountDelete from './pages/AccountDelete';
 import './App.css';
 
 // Material Design 3 inspired theme with CouponTresor colors
@@ -114,6 +115,7 @@ function AppContent() {
         <Route path="/widerruf" element={<Widerruf />} />
         <Route path="/datenschutz-app" element={<DatenschutzApp />} />
         <Route path="/lizenzen" element={<LizenzenCompact />} />
+        <Route path="/account-delete" element={<AccountDelete />} />
       </Routes>
     </>
   );
