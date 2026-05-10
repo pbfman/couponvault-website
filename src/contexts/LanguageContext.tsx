@@ -97,7 +97,7 @@ const translations: Record<Language, Translations> = {
     badgeXPMaster: 'XP-Meister',
 
     // Download
-    availableOnAndroid: 'Bald für Android verfügbar',
+    availableOnAndroid: 'Jetzt für Android verfügbar',
     downloadTitle: 'Lade CouponTresor herunter',
     downloadSubtitle: 'Starte heute mit dem Organisieren deiner Coupons. CouponTresor ist kostenlos zum Herunterladen und Nutzen. KI-Funktionen wie die automatische Texterkennung benötigen In-App-Credits.',
     downloadSecure: 'Sicher',
@@ -257,7 +257,7 @@ const translations: Record<Language, Translations> = {
     badgeXPMaster: 'XP Master',
 
     // Download
-    availableOnAndroid: 'Coming Soon for Android',
+    availableOnAndroid: 'Now Available on Android',
     downloadTitle: 'Download CouponTresor',
     downloadSubtitle: 'Start organizing your coupons today. CouponTresor is free to download and use. AI features like automatic text recognition require in-app credits.',
     downloadSecure: 'Secure & Private',

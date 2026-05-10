@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import DevelopmentBanner from '../components/DevelopmentBanner';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import HowItWorks from '../components/HowItWorks';
@@ -14,7 +13,6 @@ const Home: React.FC = () => {
   return (
     <div className="app">
       <Navbar />
-      <DevelopmentBanner />
       <main>
         <Hero />
         <Features />

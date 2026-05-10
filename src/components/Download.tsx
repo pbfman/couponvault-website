@@ -5,18 +5,14 @@ import {
   Typography,
   Button,
   Grid,
-  Card,
-  CardContent,
   Chip,
 } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import AndroidIcon from '@mui/icons-material/Android';
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import SecurityIcon from '@mui/icons-material/Security';
 import UpdateIcon from '@mui/icons-material/Update';
 import StarIcon from '@mui/icons-material/Star';
-import ConstructionIcon from '@mui/icons-material/Construction';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Download: React.FC = () => {
@@ -136,45 +132,29 @@ const Download: React.FC = () => {
                 ))}
               </Box>
 
-              {/* Download Button - Grayed out */}
+              {/* Download Button */}
               <Box sx={{ position: 'relative', display: 'inline-block' }}>
                 <Button
                   variant="contained"
                   size="large"
                   startIcon={<AndroidIcon />}
-                  disabled
+                  component="a"
+                  href="https://play.google.com/store/apps/details?id=de.pbfman.couponvault"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
-                    background: 'rgba(61, 220, 132, 0.3)',
-                    color: 'rgba(255, 255, 255, 0.5)',
+                    background: 'linear-gradient(135deg, #3DDC84, #00C853)',
+                    color: '#fff',
                     fontSize: '1.2rem',
                     px: 5,
                     py: 2,
-                    cursor: 'not-allowed',
-                    '&.Mui-disabled': {
-                      background: 'rgba(61, 220, 132, 0.2)',
-                      color: 'rgba(255, 255, 255, 0.5)',
+                    '&:hover': {
+                      background: 'linear-gradient(135deg, #00C853, #3DDC84)',
                     },
                   }}
                 >
                   {t('getOnGooglePlay')}
                 </Button>
-                <Chip
-                  icon={<ConstructionIcon sx={{ fontSize: 14 }} />}
-                  label={t('comingSoon')}
-                  size="small"
-                  sx={{
-                    position: 'absolute',
-                    top: -12,
-                    right: -12,
-                    background: 'rgba(255, 152, 0, 0.9)',
-                    color: 'white',
-                    fontWeight: 600,
-                    fontSize: '0.7rem',
-                    '& .MuiChip-icon': {
-                      color: 'white',
-                    },
-                  }}
-                />
               </Box>
 
               <Typography
@@ -206,121 +186,28 @@ const Download: React.FC = () => {
                     position: 'relative',
                   }}
                 >
-                  {/* Phone mockup */}
-                  <Card
+                  {/* Phone frame with real screenshot */}
+                  <Box
                     sx={{
                       width: 280,
-                      height: 560,
-                      borderRadius: '24px',
-                      background: 'linear-gradient(180deg, #2B2930 0%, #1C1B1F 100%)',
+                      borderRadius: '36px',
                       border: '8px solid #49454F',
-                      position: 'relative',
                       overflow: 'hidden',
                       boxShadow: '0 40px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(208, 188, 255, 0.1)',
+                      position: 'relative',
+                      lineHeight: 0,
                     }}
                   >
-                    {/* Phone notch */}
-                    <Box
-                      sx={{
-                        position: 'absolute',
-                        top: 10,
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        width: 80,
-                        height: 24,
-                        borderRadius: 12,
-                        background: '#1C1B1F',
-                        zIndex: 10,
+                    <img
+                      src="/screen.png"
+                      alt="CouponVault App Screenshot"
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        display: 'block',
                       }}
                     />
-
-                    <CardContent sx={{ p: 3, pt: 5 }}>
-                      {/* App header mockup */}
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: 1,
-                          mb: 3,
-                          mt: 2,
-                        }}
-                      >
-                        <PhoneAndroidIcon sx={{ color: '#D0BCFF', fontSize: 24 }} />
-                        <Typography
-                          variant="h6"
-                          sx={{ color: 'white', fontWeight: 600 }}
-                        >
-                          CouponTresor
-                        </Typography>
-                      </Box>
-
-                      {/* Mock coupon list */}
-                      {[
-                        { shop: 'Amazon', value: '20%', color: '#FF9900' },
-                        { shop: 'MediaMarkt', value: '€50', color: '#DF0000' },
-                        { shop: 'REWE', value: '10%', color: '#CC071E' },
-                        { shop: 'Saturn', value: '15%', color: '#0064B1' },
-                      ].map((coupon) => (
-                        <Box
-                          key={coupon.shop}
-                          sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            p: 1.5,
-                            mb: 1.5,
-                            borderRadius: 2,
-                            background: 'rgba(255, 255, 255, 0.05)',
-                            borderLeft: `3px solid ${coupon.color}`,
-                          }}
-                        >
-                          <Typography
-                            variant="body2"
-                            sx={{ color: 'white', fontWeight: 500 }}
-                          >
-                            {coupon.shop}
-                          </Typography>
-                          <Chip
-                            label={coupon.value}
-                            size="small"
-                            sx={{
-                              background: `${coupon.color}20`,
-                              color: coupon.color,
-                              fontWeight: 600,
-                              height: 24,
-                            }}
-                          />
-                        </Box>
-                      ))}
-
-                      {/* Add button mockup */}
-                      <Box
-                        sx={{
-                          position: 'absolute',
-                          bottom: 30,
-                          right: 20,
-                          width: 56,
-                          height: 56,
-                          borderRadius: '50%',
-                          background: 'linear-gradient(135deg, #6750A4, #D0BCFF)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          boxShadow: '0 8px 24px rgba(103, 80, 164, 0.4)',
-                        }}
-                      >
-                        <Typography
-                          sx={{
-                            fontSize: 28,
-                            color: 'white',
-                            fontWeight: 300,
-                          }}
-                        >
-                          +
-                        </Typography>
-                      </Box>
-                    </CardContent>
-                  </Card>
+                  </Box>
 
                   {/* Glow effect */}
                   <Box
