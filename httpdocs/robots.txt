@@ -27,5 +27,3 @@ Disallow: /
 User-agent: SemrushBot
 Disallow: /
 
-# Sitemap location
-Sitemap: https://yourdomain.com/sitemap.xml
